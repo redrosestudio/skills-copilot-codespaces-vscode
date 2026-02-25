@@ -1,16 +1,19 @@
-//create function for find fizz buzz    
 function fizzBuzz(n) {
+  const result = [];
+
   for (let i = 1; i <= n; i++) {
     if (i % 15 === 0) {
-      console.log("FizzBuzz");
+      result.push("FizzBuzz");
     } else if (i % 3 === 0) {
-      console.log("Fizz");
+      result.push("Fizz");
     } else if (i % 5 === 0) {
-      console.log("Buzz");
+      result.push("Buzz");
     } else {
-      console.log(i);
+      result.push(i);
     }
   }
+
+  return result;
 }
 
-fizzBuzz(20);
+module.exports = fizzBuzz;
