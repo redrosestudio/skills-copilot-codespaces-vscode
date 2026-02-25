@@ -16,4 +16,9 @@ function fizzBuzz(n) {
   return result;
 }
 
-module.exports = fizzBuzz;
+export { fizzBuzz };
+export default fizzBuzz;
+
+if (import.meta.main) {
+  console.log(fizzBuzz(20).join("\n"));
+}
